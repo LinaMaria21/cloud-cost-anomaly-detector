@@ -6,7 +6,6 @@ Cloud Cost Anomaly Detector
 <img width="1353" height="638" alt="chart2" src="https://github.com/user-attachments/assets/1d45081a-cb5c-44d0-90f8-ad7211f927d7" />
 
 
-
 A PySpark pipeline that detects unusual spending spikes in AWS cost data using rolling statistical thresholds — built and run on Databricks (Serverless compute).
 
 What it does
