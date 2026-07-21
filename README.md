@@ -9,7 +9,6 @@ A PySpark pipeline that detects unusual spending spikes in AWS cost data using r
 
 What it does
 
-
 Loads daily cost data across 7 AWS services (EC2, S3, Lambda, RDS, DynamoDB, CloudWatch, Data Transfer) over 6 months
 Computes a rolling 7-day mean and standard deviation per service using Spark window functions
 Flags any day where cost exceeds 2 standard deviations above the rolling mean
