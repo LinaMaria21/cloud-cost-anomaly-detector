@@ -16,7 +16,7 @@ Validates results against 6 known, deliberately injected cost spikes
 Visualizes cost trends and detected anomalies
 
 
-Results
+Results:
 
 
 Detected 6 out of 6 injected anomalies with zero false negatives.
