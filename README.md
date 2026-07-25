@@ -18,6 +18,7 @@ Visualizes cost trends and detected anomalies
 
 Results
 
+
 Detected 6 out of 6 injected anomalies with zero false negatives.
 
 Show Image
