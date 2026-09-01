@@ -21,12 +21,12 @@ df = spark.table("workspace.default.cloud_cost_data")
 df = df.withColumn("date", F.to_date("date"))
 df.show(5)
 
-# COMMAND ----------
+# COMMAND --------
 
 # MAGIC %md
 # MAGIC ## Rolling 7-day mean & stddev per service
 
-# COMMAND ----------
+# COMMAND --------
 
 window_spec = (
     Window.partitionBy("service")
