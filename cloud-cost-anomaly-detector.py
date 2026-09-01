@@ -40,12 +40,12 @@ df_rolling = (
     .withColumn("rolling_std", F.stddev("cost").over(window_spec))
 )
 
-# COMMAND ----------
+# COMMAND ---------
 
 # MAGIC %md
 # MAGIC ## Flag anomalies: cost > rolling_mean + 2 * rolling_std
 
-# COMMAND ----------
+# COMMAND ---------
 
 df_flagged = df_rolling.withColumn(
     "is_anomaly",
