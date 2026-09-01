@@ -7,7 +7,8 @@
 # MAGIC deviations above the rolling mean. Results are checked against the known
 # MAGIC injected spikes from `generate_cost_data.py` to validate detection accuracy.
 
-# COMMAND ----------
+# COMMAND 
+
 
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
