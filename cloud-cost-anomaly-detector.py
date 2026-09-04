@@ -53,7 +53,7 @@ df_flagged = df_rolling.withColumn(
         (F.col("rolling_std").isNotNull()) &
         (F.col("cost") > F.col("rolling_mean") + 2 * F.col("rolling_std")),
         1
-    ).otherwise
+    ).otherwise(0)
 )
 
 # Add cost status
