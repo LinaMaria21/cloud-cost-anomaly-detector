@@ -53,10 +53,19 @@ df_flagged = df_rolling.withColumn(
         (F.col("rolling_std").isNotNull()) &
         (F.col("cost") > F.col("rolling_mean") + 2 * F.col("rolling_std")),
         1
-    ).otherwise(0)
+    ).otherwise
 )
 
-anomalies = df_flagged.filter(F.col("is_anomaly") == 1).orderBy("date")
+# Add cost status
+df_flagged = df_flagged.withColumn(
+    "cost_status",
+    F.when(F.col("is_anomaly") == 1, "Anomaly")
+     .otherwise("Normal")
+)
+
+anomalies = df_flagged.filter(
+    F.col("is_anomaly") == 1
+).orderBy("date")
 anomalies.select("date", "service", "cost", "rolling_mean", "rolling_std").show(50, truncate=False)
 
 # COMMAND ----------
